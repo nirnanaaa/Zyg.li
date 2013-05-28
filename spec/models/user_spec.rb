@@ -1,5 +1,21 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe "Relations" do
+  
+  end
+
+  describe "Validations" do
+  
+  end
+
+  describe "Class methods" do
+  
+  end
+
+  describe "Instance methods" do
+  
+  end
+
 end
