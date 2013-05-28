@@ -19,6 +19,11 @@ dump.rdb
 /cache
 /coverage/*
 /public/assets/*
+/db/structure.sql
+*~
+*.swp
+*.swo
+
 
 config/database.yml
 config/redis.yml
