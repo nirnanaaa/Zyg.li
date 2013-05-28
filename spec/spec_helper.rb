@@ -22,7 +22,7 @@ RSpec.configure do |config|
 
   config.before do
     # enable as needed
-    ActiveRecord::Base.observers.disable :all
+    #ActiveRecord::Base.observers.disable :all
   end
 
 end
