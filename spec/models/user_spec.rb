@@ -7,6 +7,7 @@ describe User do
   end
 
   describe "Validations" do
+    
   
   end
 
