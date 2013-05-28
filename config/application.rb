@@ -5,7 +5,6 @@ require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "sprockets/railtie"
-# require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -19,10 +18,24 @@ module BSH
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :en
+
+    config.autoload_paths += Dir["#{config.root}/app/serializers"]
+    config.autoload_paths += Dir["#{config.root}/lib/validators/"]
+
+    config.encoding = 'utf-8'
+    config.filter_parameters += [:password]
+    config.assets.enabled = true
+    config.assets.version = '1.0.0'
+    config.active_record.thread_safe!
+    config.active_record.schema_format = :sql
+    config.pbkdf2_iterations = 64000
+    config.exceptions_app = self.routes
+    config.ember.variant = :development
+
   end
 end
