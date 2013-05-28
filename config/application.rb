@@ -37,5 +37,7 @@ module BSH
     config.exceptions_app = self.routes
     config.ember.variant = :development
 
+    config.default_website = "http://eu.battle.net/wow/de"
+
   end
 end
