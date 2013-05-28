@@ -4,6 +4,25 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+
+tags
+
+.DS_Store
+._.DS_Store
+dump.rdb
+
+.sass-cache/*
+/bin
+/.bundle
+/.vagrant
+/.vagrantfile
+/cache
+/coverage/*
+/public/assets/*
+
+config/database.yml
+config/redis.yml
+
 # Ignore bundler config.
 /.bundle
 
@@ -14,3 +33,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+
