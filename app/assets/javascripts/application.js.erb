@@ -13,10 +13,9 @@
 //= require ./env
 
 <% 
-[:jquery, :modernizr].each do |plugin|
-  require_asset("./vendor/#{Rails.env}/#{plugin}")
-
+[:jquery, :modernizr, :jquery_ui_widget, :handlebars, :ember, :ember_data, :sugar, :timeago].each do |plugin|
+  require_asset("./vendor/#{Rails.env}/#{plugin}.js")
 end 
 %>
 
-//= require ./BSH
+//= require ./BSH_loader
