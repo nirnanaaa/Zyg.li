@@ -1,3 +1,32 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id               :integer          not null, primary key
+#  username         :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#  name             :string(255)
+#  bio              :text
+#  last_posted_at   :datetime
+#  password_hash    :string(255)
+#  salt             :string(255)
+#  is_admin         :boolean
+#  is_moderator     :boolean
+#  skype            :string(255)
+#  website          :string(255)
+#  display_username :string(255)
+#  username_lower   :string(20)       not null
+#  banned_at        :datetime
+#  banned_till      :datetime
+#  is_active        :boolean
+#
+# Indexes
+#
+#  index_users_on_username        (username) UNIQUE
+#  index_users_on_username_lower  (username_lower) UNIQUE
+#
+
 require 'spec_helper'
 
 describe User do
