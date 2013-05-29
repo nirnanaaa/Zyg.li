@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 
   scope :admins, -> { where(is_admin: true) }
   scope :mods, ->   { where(is_moderator: true) }
-  scope :staff, ->  { where("is_moderator = 'true' or is_admin = 'true'") }
+  scope :offis, ->  { where("is_moderator = 'true' or is_admin = 'true'") }
 
   class << self
     def username_range
