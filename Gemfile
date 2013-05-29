@@ -59,12 +59,12 @@ group :test, :development do
   gem 'guard-jshint-on-rails', require: false
   gem 'certified', require: false
   gem 'fabrication', require: false
- # gem 'guard-jasmine', require: false
+  gem 'guard-jasmine', require: false
   gem 'guard-rspec', require: false
   gem 'guard-spork', require: false
   gem "parallel_tests"
   gem "zeus-parallel_tests"
- # gem 'jasminerice' # not compatible with rails 4
+  gem 'jasminerice', github: 'bradphelan/jasminerice' # not compatible with rails 4
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false

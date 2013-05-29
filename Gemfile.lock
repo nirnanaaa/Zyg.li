@@ -9,6 +9,13 @@ GIT
       thin
 
 GIT
+  remote: git://github.com/bradphelan/jasminerice.git
+  revision: b5370e3cf2931aa5478e775369afb5ecef1c18b5
+  specs:
+    jasminerice (0.1.0)
+      coffee-rails
+
+GIT
   remote: https://github.com/CodeMonkeySteve/fast_xor.git
   revision: 85b79ec6d116f9680f23bd2c5c8c2c2039d477d8
   specs:
@@ -171,6 +178,12 @@ GEM
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
+    guard-jasmine (1.16.0)
+      childprocess
+      guard (>= 1.1.0)
+      multi_json
+      thor
+      tilt
     guard-jshint-on-rails (0.0.2)
       guard (>= 1.0.0)
       jshint_on_rails (>= 1.0.2)
@@ -395,12 +408,14 @@ DEPENDENCIES
   fast_xor!
   fast_xs
   fog
+  guard-jasmine
   guard-jshint-on-rails
   guard-rspec
   guard-spork
   handlebars-source (>= 1.0.0.rc3)
   has_ip_address
   hiredis
+  jasminerice!
   jbuilder (~> 1.0.1)
   jquery-rails
   jshint_on_rails
