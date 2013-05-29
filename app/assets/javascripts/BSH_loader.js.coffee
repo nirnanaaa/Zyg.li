@@ -10,4 +10,4 @@
 #= require_tree ./BSH/routes
 
 
-#= require ./external/browser-update
+#= require ./vendor/browser-update
