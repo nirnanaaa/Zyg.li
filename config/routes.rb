@@ -2,7 +2,7 @@ require 'sidekiq/web'
 
 require_dependency 'admin_constraint'
 require_dependency 'homepage_constraint'
-require_dependency 'staff_constraint'
+require_dependency 'offi_constraint'
 
 BSH::Application.routes.draw do
 
@@ -26,5 +26,5 @@ BSH::Application.routes.draw do
 
   get 'robots.txt' => 'crawlers#robots'
 
-  root to: ''
+  root to: 'pages#index'
 end
