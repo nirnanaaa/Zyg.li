@@ -1,17 +1,17 @@
-# == Route Map (Updated 2013-05-30 11:20)
+# == Route Map (Updated 2013-05-30 11:22)
 #
 #      Prefix Verb   URI Pattern                 Controller#Action
 # jasminerice        /jasmine                    Jasminerice::Engine
 #             GET    /404(.:format)              exceptions#not_found_404
 # sidekiq_web        /sidekiq                    Sidekiq::Web
-#       posts GET    /posts(.:format)            posts#index
-#             POST   /posts(.:format)            posts#create
-#    new_post GET    /posts/new(.:format)        posts#new
-#   edit_post GET    /posts/:id/edit(.:format)   posts#edit
-#        post GET    /posts/:id(.:format)        posts#show
-#             PATCH  /posts/:id(.:format)        posts#update
-#             PUT    /posts/:id(.:format)        posts#update
-#             DELETE /posts/:id(.:format)        posts#destroy
+#       pages GET    /pages(.:format)            pages#index
+#             POST   /pages(.:format)            pages#create
+#    new_page GET    /pages/new(.:format)        pages#new
+#   edit_page GET    /pages/:id/edit(.:format)   pages#edit
+#        page GET    /pages/:id(.:format)        pages#show
+#             PATCH  /pages/:id(.:format)        pages#update
+#             PUT    /pages/:id(.:format)        pages#update
+#             DELETE /pages/:id(.:format)        pages#destroy
 #       users GET    /users(.:format)            users#index
 #             POST   /users(.:format)            users#create
 #    new_user GET    /users/new(.:format)        users#new
