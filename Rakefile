@@ -1,5 +1,5 @@
 require File.expand_path('../config/application', __FILE__)
 
-BSH::Application.load_tasks
+Bsh::Application.load_tasks
 
 

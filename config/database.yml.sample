@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: BSH_development
+  database: Bsh_development
   pool: 5
-  username: BSH
+  username: Bsh
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,15 +46,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: BSH_test
+  database: Bsh_test
   pool: 5
-  username: BSH
+  username: Bsh
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: BSH_production
+  database: Bsh_production
   pool: 5
-  username: BSH
+  username: Bsh
   password:

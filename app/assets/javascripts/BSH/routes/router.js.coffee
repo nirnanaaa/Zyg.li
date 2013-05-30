@@ -1,4 +1,4 @@
-BSH.Route = Em.Route.extend
+Bsh.Route = Em.Route.extend
   activate: (router, context) ->
     @_super()
 

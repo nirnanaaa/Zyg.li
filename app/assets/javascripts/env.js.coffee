@@ -3,5 +3,5 @@ window.ENV =
   VIEW_PRESERVES_CONTEXT: true,
   MANDATORY_SETTER: false
  
-window.BSH = {}
-BSH.Settings = {}
+window.Bsh = {}
+Bsh.Settings = {}

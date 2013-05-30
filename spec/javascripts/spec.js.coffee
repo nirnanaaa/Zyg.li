@@ -8,23 +8,23 @@
 #
 #= require_tree ../../app/assets/javascripts/extensions
 #= require ../../app/assets/javascripts/locales/i18n
-#= require ../../app/assets/javascripts/BSH
+#= require ../../app/assets/javascripts/Bsh
 
-#= require_tree ../../app/assets/javascripts/BSH/mixins
-#= require ../../app/assets/javascripts/BSH/views/view
-#= require ../../app/assets/javascripts/BSH/controllers/controller
-#= require ../../app/assets/javascripts/BSH/controllers/object_controller
-#= require ../../app/assets/javascripts/BSH/models/model
-#= require ../../app/assets/javascripts/BSH/routes/router
+#= require_tree ../../app/assets/javascripts/Bsh/mixins
+#= require ../../app/assets/javascripts/Bsh/views/view
+#= require ../../app/assets/javascripts/Bsh/controllers/controller
+#= require ../../app/assets/javascripts/Bsh/controllers/object_controller
+#= require ../../app/assets/javascripts/Bsh/models/model
+#= require ../../app/assets/javascripts/Bsh/routes/router
 
-#= require_tree ../../app/assets/javascripts/BSH/stores
-#= require_tree ../../app/assets/javascripts/BSH/controllers
-#= require_tree ../../app/assets/javascripts/BSH/components
-#= require_tree ../../app/assets/javascripts/BSH/models
-#= require_tree ../../app/assets/javascripts/BSH/views
-#= require_tree ../../app/assets/javascripts/BSH/helpers
-#= require_tree ../../app/assets/javascripts/BSH/templates
-#= require_tree ../../app/assets/javascripts/BSH/routes
+#= require_tree ../../app/assets/javascripts/Bsh/stores
+#= require_tree ../../app/assets/javascripts/Bsh/controllers
+#= require_tree ../../app/assets/javascripts/Bsh/components
+#= require_tree ../../app/assets/javascripts/Bsh/models
+#= require_tree ../../app/assets/javascripts/Bsh/views
+#= require_tree ../../app/assets/javascripts/Bsh/helpers
+#= require_tree ../../app/assets/javascripts/Bsh/templates
+#= require_tree ../../app/assets/javascripts/Bsh/routes
 
 
 #= require_tree .

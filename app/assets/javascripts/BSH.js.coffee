@@ -1,4 +1,4 @@
-BSH = Ember.Application.createWithMixins
+Bsh = Ember.Application.createWithMixins
   LOG_TRANSITIONS: true
   authStateBinding: 'auth.State'
   
@@ -14,17 +14,17 @@ BSH = Ember.Application.createWithMixins
   setLocale: (locale) ->
     return unless locale
     I18n.locale = locale
-    BSH.set('locale', locale)
+    Bsh.set('locale', locale)
 
   defaultLocale: 'en'
   loadDomEvents: ->
     $html = $('html')
 
     $(window).focus (->
-      BSH.set 'hasFocus', true
-      BSH.set 'notify', false
+      Bsh.set 'hasFocus', true
+      Bsh.set 'notify', false
     ).blur ->
-      BSH.set 'hasFocus', false
+      Bsh.set 'hasFocus', false
 
     csrfToken = $('meta[name=csrf-token]').attr('content')
     $.ajaxPrefilter (options, originalOptions, xhr) ->
@@ -48,24 +48,24 @@ BSH = Ember.Application.createWithMixins
 
       e.preventDefault()
       console.log('route')
-      #BSH.URL.routeTo(href)
+      #Bsh.URL.routeTo(href)
       return false
 
   logout: ->
-    BSH.User.logout().then ->
-      #      BSH.KVstore.truncate()
+    Bsh.User.logout().then ->
+      #      Bsh.KVstore.truncate()
       window.location.reload()
 
   currentUser: ->
-    BSH.User.current()
+    Bsh.User.current()
 
-  bootup: ->
-    BSH.loadDomEvents()
+  start: ->
+    Bsh.loadDomEvents()
 
 
-BSH.Router = Ember.Router.extend()
+Bsh.Router = Ember.Router.extend()
 
-BSH.Router.reopen
+Bsh.Router.reopen
   location: 'history'
 
 

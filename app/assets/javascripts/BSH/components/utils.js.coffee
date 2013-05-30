@@ -1,4 +1,4 @@
-BSH.Utils =
+Bsh.Utils =
   normalizeHash: (hash, types) ->
     for prop in hash
       if types[prop] == 'ID'
