@@ -1,4 +1,7 @@
 BSH = Ember.Application.createWithMixins
+  LOG_TRANSITIONS: true
+  authStateBinding: 'auth.State'
+  
   rootElement: '#root'
   hasFocus: true
   scrolling: false
@@ -8,6 +11,11 @@ BSH = Ember.Application.createWithMixins
   currentDate: ->
     new Date()
 
+  setLocale: (locale) ->
+    return unless locale
+    I18n.locale = locale
+    BSH.set('locale', locale)
+
   defaultLocale: 'en'
 
 BSH.Router = Ember.Router.extend()
@@ -15,7 +23,8 @@ BSH.Router = Ember.Router.extend()
 BSH.Router.reopen
   location: 'history'
 
-$('#root').on 'click.BSH', 'a', (e) ->
+
+$('#root').on 'click', 'a', (e) ->
   if (e.isDefaultPrevented() || e.shiftKey || e.metaKey || e.ctrlKey)
     return
 
@@ -34,5 +43,5 @@ $('#root').on 'click.BSH', 'a', (e) ->
   console.log('route')
   #BSH.URL.routeTo(href)
   return false
-  
+
 
