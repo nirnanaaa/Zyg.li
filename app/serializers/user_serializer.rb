@@ -1,1 +1,3 @@
-class UserSerializer <
+class UserSerializer < RootSerializer
+  
+end
