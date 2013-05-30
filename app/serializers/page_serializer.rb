@@ -1,0 +1,4 @@
+class PageSerializer < RootSerializer
+  
+end
+
