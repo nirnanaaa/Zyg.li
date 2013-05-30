@@ -1,0 +1,1 @@
+class BSH::NotLoggedIn; end
