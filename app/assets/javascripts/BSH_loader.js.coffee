@@ -1,4 +1,5 @@
 
+#= require_tree ./extensions
 #= require ./BSH
 
 #= require_tree ./BSH/controllers
