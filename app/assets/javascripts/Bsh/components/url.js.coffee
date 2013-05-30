@@ -5,7 +5,7 @@ Bsh.URL =
 
   replaceState: (path) ->
 
-    if window.history && window.history.pushState && window.history.replaceState && (window.location.pathname !== path)
+    if window.history && window.history.pushState && window.history.replaceState && (window.location.pathname != path)
       Em.run.next ->
         Bsh.URL.router().get('location').replaceURL(path)
 
@@ -14,7 +14,7 @@ Bsh.URL =
     path = path.replace(/https?\:\/\/[^\/]+/, '')
 
 
-    if @MORE_REGEXP.exec(currentPath) && (currentPath.indexOf(path) === 0)
+    if @MORE_REGEXP.exec(currentPath) && (currentPath.indexOf(path) == 0)
       window.scrollTo(0, 0)
 
     router = @router()
