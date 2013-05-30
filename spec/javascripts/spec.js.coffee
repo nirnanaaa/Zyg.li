@@ -2,12 +2,12 @@
 #
 #= require ../../app/assets/javascripts/vendor/test/jquery
 #= require ../../app/assets/javascripts/vendor/test/jquery_ui_widget
+#= require ../../app/assets/javascripts/vendor/test/handlebars
 #= require ../../app/assets/javascripts/vendor/test/ember
 #= require ../../app/assets/javascripts/vendor/test/ember_data
 #= require ../../app/assets/javascripts/vendor/test/sugar
 #
 #= require_tree ../../app/assets/javascripts/extensions
-#= require ../../app/assets/javascripts/locales/i18n
 #= require ../../app/assets/javascripts/Zyg
 
 #= require_tree ../../app/assets/javascripts/Zyg/mixins
