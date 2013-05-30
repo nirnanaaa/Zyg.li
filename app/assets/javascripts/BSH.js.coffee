@@ -17,31 +17,56 @@ BSH = Ember.Application.createWithMixins
     BSH.set('locale', locale)
 
   defaultLocale: 'en'
+  loadDomEvents: ->
+    $html = $('html')
+
+    $(window).focus (->
+      BSH.set 'hasFocus', true
+      BSH.set 'notify', false
+    ).blur ->
+      BSH.set 'hasFocus', false
+
+    csrfToken = $('meta[name=csrf-token]').attr('content')
+    $.ajaxPrefilter (options, originalOptions, xhr) ->
+      if !options.crossDomain
+        xhr.setRequestHeader 'X-CSRF-Token', csrfToken
+
+    $('#root').on 'click', 'a', (e) ->
+      if (e.isDefaultPrevented() || e.shiftKey || e.metaKey || e.ctrlKey)
+        return
+
+      currentTarget = $(e.currentTarget)
+      href = target.attr('href')
+      if !href then return
+      if href == '#' then return
+      if target.attr 'target' then return
+      
+      if target.hasClass 'lightbox' then return
+      if target.hasClass 'ember-view' then return
+      if href.indexOf "mailto" == 0 then return
+      if href.match(/^http[s]?:\/\//i) && !href.match(new RegExp("^http:\\/\\/" + window.location.hostname, "i")) then return
+
+      e.preventDefault()
+      console.log('route')
+      #BSH.URL.routeTo(href)
+      return false
+
+  logout: ->
+    BSH.User.logout().then ->
+      #      BSH.KVstore.truncate()
+      window.location.reload()
+
+  currentUser: ->
+    BSH.User.current()
+
+  bootup: ->
+    BSH.loadDomEvents()
+
 
 BSH.Router = Ember.Router.extend()
 
 BSH.Router.reopen
   location: 'history'
 
-
-$('#root').on 'click', 'a', (e) ->
-  if (e.isDefaultPrevented() || e.shiftKey || e.metaKey || e.ctrlKey)
-    return
-
-  currentTarget = $(e.currentTarget)
-  href = target.attr('href')
-  if !href then return
-  if href == '#' then return
-  if target.attr 'target' then return
-  
-  if target.hasClass 'lightbox' then return
-  if target.hasClass 'ember-view' then return
-  if href.indexOf "mailto" == 0 then return
-  if href.match(/^http[s]?:\/\//i) && !href.match(new RegExp("^http:\\/\\/" + window.location.hostname, "i")) then return
-
-  e.preventDefault()
-  console.log('route')
-  #BSH.URL.routeTo(href)
-  return false
 
 
