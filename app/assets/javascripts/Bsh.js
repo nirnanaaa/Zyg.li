@@ -71,6 +71,7 @@ Bsh = Ember.Application.createWithMixins({
       }
 
       e.preventDefault();
+      Bsh.URL.routeTo(href);
       return false;
     });
   },
