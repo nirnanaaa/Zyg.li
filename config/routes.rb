@@ -1,9 +1,17 @@
-# == Route Map (Updated 2013-05-29 23:08)
+# == Route Map (Updated 2013-05-30 11:20)
 #
 #      Prefix Verb   URI Pattern                 Controller#Action
 # jasminerice        /jasmine                    Jasminerice::Engine
 #             GET    /404(.:format)              exceptions#not_found_404
 # sidekiq_web        /sidekiq                    Sidekiq::Web
+#       posts GET    /posts(.:format)            posts#index
+#             POST   /posts(.:format)            posts#create
+#    new_post GET    /posts/new(.:format)        posts#new
+#   edit_post GET    /posts/:id/edit(.:format)   posts#edit
+#        post GET    /posts/:id(.:format)        posts#show
+#             PATCH  /posts/:id(.:format)        posts#update
+#             PUT    /posts/:id(.:format)        posts#update
+#             DELETE /posts/:id(.:format)        posts#destroy
 #       users GET    /users(.:format)            users#index
 #             POST   /users(.:format)            users#create
 #    new_user GET    /users/new(.:format)        users#new
@@ -51,6 +59,9 @@ BSH::Application.routes.draw do
 
   mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
      
+  resources :posts do
+  end
+
   resources :users do
   end
 

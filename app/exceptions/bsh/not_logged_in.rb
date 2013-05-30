@@ -1,1 +1,3 @@
-class BSH::NotLoggedIn; end
+class BSH::NotLoggedIn < StandardError
+  
+end
