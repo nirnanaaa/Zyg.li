@@ -21,49 +21,48 @@ Bsh = Ember.Application.createWithMixins({
   loadDomEvents: function() {
     var $html, csrfToken;
     $html = $('html');
-    //$(window).focus((function() {
-    //  Bsh.set('hasFocus', true);
-    //  return Bsh.set('notify', false);
-    //}).blur(function() {
-    //  return Bsh.set('hasFocus', false);
-    //}));
     csrfToken = $('meta[name=csrf-token]').attr('content');
     $.ajaxPrefilter(function(options, originalOptions, xhr) {
       if (!options.crossDomain) {
         return xhr.setRequestHeader('X-CSRF-Token', csrfToken);
       }
     });
-    return $('#root').on('click', 'a', function(e) {
+    $("#root").on("click", "a", function(e){
       var target, href;
 
-      if (e.isDefaultPrevented() || e.shiftKey || e.metaKey || e.ctrlKey) {
+      if ( e.shiftKey || e.metaKey || e.ctrlKey) {
         return;
       }
       target = $(e.target);
       href = target.attr('href');
+
       if (!href) {
         return;
       }
+
       if (href === '#') {
         return;
       }
+
       if (target.attr('target')) {
         return;
       }
+
       if (target.hasClass('lightbox')) {
         return;
       }
       if (target.hasClass('ember-view')) {
         return;
       }
-      if (href.indexOf("mailto" === 0)) {
+
+      if (href.match(/mailto\:/)) {
         return;
       }
       if (href.match(/^http[s]?:\/\//i) && !href.match(new RegExp("^http:\\/\\/" + window.location.hostname, "i"))) {
         return;
       }
+
       e.preventDefault();
-      console.log('route');
       return false;
     });
   },
@@ -76,7 +75,7 @@ Bsh = Ember.Application.createWithMixins({
     return Bsh.User.current();
   },
   start: function() {
-    return Bsh.loadDomEvents();
+    Bsh.loadDomEvents();
   }
 });
 

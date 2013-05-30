@@ -8,3 +8,12 @@ Bsh.Route = Em.Route.extend
 
     hideDropDownFunction = $('html').data('hide-dropdown')
     if hideDropDownFunction then return hideDropDownFunction()
+
+
+Bsh.Route.reopenClass
+    buildRoutes: (builder) ->
+      oldBuilder = Bsh.routeBuilder
+      Bsh.routeBuilder = ->
+        if (oldBuilder) oldBuilder.call(@)
+          return builder.call(@)
+
