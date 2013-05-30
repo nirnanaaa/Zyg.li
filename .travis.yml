@@ -10,7 +10,6 @@ before_script:
 
 script: 
   - rake spec
-  - bundle exec guard-jasmine --server-timeout=60
 
 services:
   - redis-server
