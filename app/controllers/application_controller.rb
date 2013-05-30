@@ -4,8 +4,13 @@ require 'canonical_url'
 
 class ApplicationController < ActionController::Base
   include CurrentUser
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+  include CanonicalURL::ControllerExtensions
+
+  # WHAT? why current_user isn't working
+  alias_method :cur_user, :current_user
+  alias_method :current_user, :cur_user
+  helper_method :current_user
+
 #  protect_from_forgery with: :exception
 #  rescue_from Exception do |exception|
 #    unless [ ActiveRecord::RecordNotFound, ActionController::RoutingError,
