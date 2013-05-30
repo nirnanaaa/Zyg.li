@@ -21,8 +21,20 @@
 <body>
 
   <section id="root">
-    <%= yield %>
-  </section> <%= "<!--/root-->" if Rails.env.development? %>
+    <noscript data-path="<%= request.env['PATH_INFO'] %>">
+      <%= yield %>
+    </noscript>
+  </section> <%= only_dev "<!--/root-->" %>
+  
+  <% if current_user %>
+
+  <% else %>
+    <form id='hidden-login-form' method="post" action="<%=login_path%>">
+    </form>
+  <% end %>
+
+
+
 
 </body>
 </html>
