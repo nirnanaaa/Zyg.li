@@ -1,1 +1,1 @@
-BSH.Controller = Ember.Controller.extend(BSH.Presence, BSH.HoldCurrentUser)
+BSH.Controller = Ember.Controller.extend(BSH.Presence, BSH.HoldsCurrentUser)
