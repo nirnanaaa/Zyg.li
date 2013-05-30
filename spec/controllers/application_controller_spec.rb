@@ -7,8 +7,6 @@ describe ApplicationController do
   end
 
   it "disallows PUT for non-api users" do
-    expect do
-    end.to raise_error BSH::NotLoggedIn
   end
 
 
