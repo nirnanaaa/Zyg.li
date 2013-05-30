@@ -20,15 +20,13 @@ Bsh = Ember.Application.createWithMixins({
   defaultLocale: 'en',
   loadDomEvents: function() {
     var $html, csrfToken;
-
-    console.log('bla');
     $html = $('html');
-    $(window).focus((function() {
-      Bsh.set('hasFocus', true);
-      return Bsh.set('notify', false);
-    }).blur(function() {
-      return Bsh.set('hasFocus', false);
-    }));
+    //$(window).focus((function() {
+    //  Bsh.set('hasFocus', true);
+    //  return Bsh.set('notify', false);
+    //}).blur(function() {
+    //  return Bsh.set('hasFocus', false);
+    //}));
     csrfToken = $('meta[name=csrf-token]').attr('content');
     $.ajaxPrefilter(function(options, originalOptions, xhr) {
       if (!options.crossDomain) {
@@ -36,12 +34,12 @@ Bsh = Ember.Application.createWithMixins({
       }
     });
     return $('#root').on('click', 'a', function(e) {
-      var currentTarget, href;
+      var target, href;
 
       if (e.isDefaultPrevented() || e.shiftKey || e.metaKey || e.ctrlKey) {
         return;
       }
-      currentTarget = $(e.currentTarget);
+      target = $(e.target);
       href = target.attr('href');
       if (!href) {
         return;
