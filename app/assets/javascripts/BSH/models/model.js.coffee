@@ -1,18 +1,18 @@
 BSH.Model = Ember.Object.extend BSH.Presence,
 
   mergeAttributes: (attributes, build) ->
-    _@ = @
+    self = @
     return Object.keys attributes, (key, value) ->
       if typeof value == 'object' and build and ( builder=build[key] )
-        if !_@get(key)
-          _@set key, Em.A()
+        if !self.get(key)
+          self.set key, Em.A()
 
-        column = _@.get k
+        column = self.get k
         return value.each (object) ->
           column.pushObject build.create(object)
 
       else
-        _@set key, value
+        self.set key, value
 
 
 BSH.Model.reopenClass

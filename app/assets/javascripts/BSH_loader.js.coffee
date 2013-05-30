@@ -8,7 +8,6 @@
 #= require ./BSH/controllers/object_controller
 #= require ./BSH/models/model
 #= require ./BSH/routes/router
-#= require ./BSH/routes/restricted_router
 
 #= require_tree ./BSH/stores
 #= require_tree ./BSH/controllers
