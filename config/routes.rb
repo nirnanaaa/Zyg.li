@@ -59,7 +59,7 @@ BSH::Application.routes.draw do
 
   mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
      
-  resources :posts do
+  resources :pages do
   end
 
   resources :users do
