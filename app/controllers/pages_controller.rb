@@ -1,4 +1,4 @@
-require_dependency 'page_serializer'
+#require_dependency 'page_serializer'
 
 class PagesController < ApplicationController
   before_filter :ensure_current_user, except: [ :index, :show ]
