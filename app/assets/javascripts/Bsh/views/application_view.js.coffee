@@ -1,2 +1,2 @@
 Bsh.ApplicationView = Bsh.View.extend
-  templateName: 'application'
+  templateName: 'Bsh/application'
