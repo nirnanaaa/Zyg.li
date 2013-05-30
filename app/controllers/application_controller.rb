@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   include CanonicalURL::ControllerExtensions
 
   # WHAT? why current_user isn't working
-  alias_method :cur_user, :current_user
-  alias_method :current_user, :cur_user
-  helper_method :current_user
+  #alias_method :cur_user, :current_user
+  #alias_method :current_user, :cur_user
+  #helper_method :current_user
 
 #  protect_from_forgery with: :exception
 #  rescue_from Exception do |exception|
