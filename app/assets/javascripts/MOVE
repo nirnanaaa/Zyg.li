@@ -1,11 +1,10 @@
 Bsh = Ember.Application.createWithMixins
+
   LOG_TRANSITIONS: true
   authStateBinding: 'auth.State'
-  
   rootElement: '#root'
   hasFocus: true
   scrolling: false
-
   signedIn: (-> @get('authState') == 'signed-in' ).property('authState')
   
   currentDate: ->
@@ -18,6 +17,7 @@ Bsh = Ember.Application.createWithMixins
 
   defaultLocale: 'en'
   loadDomEvents: ->
+    console.log('bla')
     $html = $('html')
 
     $(window).focus (->
@@ -61,6 +61,7 @@ Bsh = Ember.Application.createWithMixins
 
   start: ->
     Bsh.loadDomEvents()
+
 
 
 Bsh.Router = Ember.Router.extend()
