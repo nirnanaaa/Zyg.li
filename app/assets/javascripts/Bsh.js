@@ -4,6 +4,14 @@ Bsh = Ember.Application.createWithMixins({
   rootElement: '#root',
   hasFocus: true,
   scrolling: false,
+  getURL: function(url) {
+    if (url.indexOf('http') === 0) return url;
+    var u = "/" ;
+    if (u[u.length-1] === '/') {
+      u = u.substring(0, u.length-1);
+    }
+    return u + url;
+  },
   signedIn: (function() {
     return this.get('authState') === 'signed-in';
   }).property('authState'),
