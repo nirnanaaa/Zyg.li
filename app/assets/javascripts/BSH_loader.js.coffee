@@ -2,6 +2,8 @@
 #= require_tree ./extensions
 #= require ./BSH
 
+#= require_tree ./BSH/mixins
+
 #= require_tree ./BSH/stores
 #= require_tree ./BSH/controllers
 #= require_tree ./BSH/components
