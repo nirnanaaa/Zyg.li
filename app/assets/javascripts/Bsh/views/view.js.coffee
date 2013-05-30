@@ -1,10 +1,10 @@
-Bsh.View = Ember.View.extend Bsh.Presence, {}
+Zyg.View = Ember.View.extend Zyg.Presence, {}
 
-Bsh.View.reopenClass
+Zyg.View.reopenClass
   registerHelper: (hName, hClass) ->
     Ember.Handlebars.registerHelper hName, (options) ->
       hash = options.hash
       types = options.hashTypes
 
-    Bsh.Utils.normalizeHash(hash, types)
+    Zyg.Utils.normalizeHash(hash, types)
     Ember.Handlebars.helpers.view.call @, hClass, options

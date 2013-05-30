@@ -1,13 +1,13 @@
-Bsh.URL =
+Zyg.URL =
   MORE_REGEXP: /\/more$/,
   router: ->
-    return Bsh.__container__.lookup('router:main')
+    return Zyg.__container__.lookup('router:main')
 
   replaceState: (path) ->
 
     if window.history && window.history.pushState && window.history.replaceState && (window.location.pathname != path)
       Em.run.next ->
-        Bsh.URL.router().get('location').replaceURL(path)
+        Zyg.URL.router().get('location').replaceURL(path)
 
   routeTo: (path) ->
     currentPath = window.location.pathname
@@ -25,4 +25,4 @@ Bsh.URL =
     return window.location.origin
 
   redirectTo: (url) ->
-    window.location = Bsh.getURL(url)
+    window.location = Zyg.getURL(url)

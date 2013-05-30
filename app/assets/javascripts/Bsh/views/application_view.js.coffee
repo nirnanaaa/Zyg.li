@@ -1,2 +1,3 @@
-Bsh.ApplicationView = Bsh.View.extend
-  templateName: 'Bsh/application'
+Zyg.ApplicationView = Zyg.View.extend
+  templateName: 'Zyg/application'
+  classNames: ['layout']

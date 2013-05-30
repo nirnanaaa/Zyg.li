@@ -1,1 +1,1 @@
-Bsh.ObjectController = Ember.ObjectController.extend(Bsh.Presence, Bsh.HoldsCurrentUser)
+Zyg.ObjectController = Ember.ObjectController.extend(Zyg.Presence, Zyg.HoldsCurrentUser)

@@ -1,6 +1,6 @@
-Bsh.HoldsCurrentUser = Em.Mixin.create
+Zyg.HoldsCurrentUser = Em.Mixin.create
   currentUser: (->
-    return Bsh.User.current()
+    return Zyg.User.current()
   ).property().volatile()
 
 

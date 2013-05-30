@@ -1,4 +1,4 @@
-Bsh.Model = Ember.Object.extend Bsh.Presence,
+Zyg.Model = Ember.Object.extend Zyg.Presence,
 
   mergeAttributes: (attributes, build) ->
     self = @
@@ -15,7 +15,7 @@ Bsh.Model = Ember.Object.extend Bsh.Presence,
         self.set key, value
 
 
-Bsh.Model.reopenClass
+Zyg.Model.reopenClass
   extractCollectionByKey: (collection, klass) ->
     toret = {}
     if !collection then return toret

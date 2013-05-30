@@ -1,3 +1,3 @@
-Bsh.localstorage = DS.Store.create
+Zyg.localstorage = DS.Store.create
   revision: 12
   adapter: DS.LSAdapter.create()

@@ -69,7 +69,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_current_user
-    raise Bsh::NotLoggedIn.new unless current_user.present?
+    raise Zyg::NotLoggedIn.new unless current_user.present?
   end
 
 

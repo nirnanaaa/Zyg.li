@@ -1,4 +1,4 @@
-Bsh = Ember.Application.createWithMixins({
+Zyg = Ember.Application.createWithMixins({
   LOG_TRANSITIONS: true,
   authStateBinding: 'auth.State',
   rootElement: '#root',
@@ -23,7 +23,7 @@ Bsh = Ember.Application.createWithMixins({
       return;
     }
     I18n.locale = locale;
-    return Bsh.set('locale', locale);
+    return Zyg.set('locale', locale);
   },
   defaultLocale: 'en',
   loadDomEvents: function() {
@@ -71,26 +71,26 @@ Bsh = Ember.Application.createWithMixins({
       }
 
       e.preventDefault();
-      Bsh.URL.routeTo(href);
+      Zyg.URL.routeTo(href);
       return false;
     });
   },
   logout: function() {
-    return Bsh.User.logout().then(function() {
+    return Zyg.User.logout().then(function() {
       return window.location.reload();
     });
   },
   currentUser: function() {
-    return Bsh.User.current();
+    return Zyg.User.current();
   },
   start: function() {
-    Bsh.loadDomEvents();
+    Zyg.loadDomEvents();
   }
 });
 
-Bsh.Router = Ember.Router.extend();
+Zyg.Router = Ember.Router.extend();
 
-Bsh.Router.reopen({
+Zyg.Router.reopen({
   location: 'history'
 });
 

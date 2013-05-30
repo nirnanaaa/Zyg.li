@@ -1,1 +1,1 @@
-Bsh.ApplicationController = Bsh.Controller.extend()
+Zyg.ApplicationController = Zyg.Controller.extend()

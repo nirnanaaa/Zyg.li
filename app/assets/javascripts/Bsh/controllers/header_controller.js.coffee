@@ -1,1 +1,1 @@
-Bsh.HeaderController = Bsh.Controller.extend()
+Zyg.HeaderController = Zyg.Controller.extend()

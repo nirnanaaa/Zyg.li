@@ -11,7 +11,7 @@ describe PagesController do
     it "disallows POST requests for not logged in users" do
       expect do
         post :create
-      end.to raise_error Bsh::NotLoggedIn
+      end.to raise_error Zyg::NotLoggedIn
     end
   end
 

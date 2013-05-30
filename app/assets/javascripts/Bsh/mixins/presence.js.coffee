@@ -1,4 +1,4 @@
-Bsh.Presence = Em.Mixin.create
+Zyg.Presence = Em.Mixin.create
   blank: (name) ->
     prop = @[name] || @get(name)
     if (!prop)

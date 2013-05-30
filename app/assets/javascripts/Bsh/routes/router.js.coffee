@@ -1,4 +1,4 @@
-Bsh.Route = Em.Route.extend
+Zyg.Route = Em.Route.extend
   activate: (router, context) ->
     @_super()
 
@@ -10,10 +10,10 @@ Bsh.Route = Em.Route.extend
     if hideDropDownFunction then return hideDropDownFunction()
 
 
-Bsh.Route.reopenClass
+Zyg.Route.reopenClass
     buildRoutes: (builder) ->
-      oldBuilder = Bsh.routeBuilder
-      Bsh.routeBuilder = ->
+      oldBuilder = Zyg.routeBuilder
+      Zyg.routeBuilder = ->
         if (oldBuilder) oldBuilder.call(@)
           return builder.call(@)
 

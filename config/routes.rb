@@ -52,7 +52,7 @@ require_dependency 'admin_constraint'
 require_dependency 'homepage_constraint'
 require_dependency 'offi_constraint'
 
-Bsh::Application.routes.draw do
+Zyg::Application.routes.draw do
 
 
   get "/404", to: "exceptions#not_found_404"

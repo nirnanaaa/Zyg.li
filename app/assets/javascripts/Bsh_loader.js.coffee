@@ -1,21 +1,21 @@
 #= require_tree ./extensions
-#= require ./Bsh
+#= require ./Zyg
 
-#= require_tree ./Bsh/mixins
-#= require ./Bsh/views/view
-#= require ./Bsh/controllers/controller
-#= require ./Bsh/controllers/object_controller
-#= require ./Bsh/models/model
-#= require ./Bsh/routes/router
+#= require_tree ./Zyg/mixins
+#= require ./Zyg/views/view
+#= require ./Zyg/controllers/controller
+#= require ./Zyg/controllers/object_controller
+#= require ./Zyg/models/model
+#= require ./Zyg/routes/router
 
-#= require_tree ./Bsh/stores
-#= require_tree ./Bsh/controllers
-#= require_tree ./Bsh/components
-#= require_tree ./Bsh/models
-#= require_tree ./Bsh/views
-#= require_tree ./Bsh/helpers
-#= require_tree ./Bsh/templates
-#= require_tree ./Bsh/routes
+#= require_tree ./Zyg/stores
+#= require_tree ./Zyg/controllers
+#= require_tree ./Zyg/components
+#= require_tree ./Zyg/models
+#= require_tree ./Zyg/views
+#= require_tree ./Zyg/helpers
+#= require_tree ./Zyg/templates
+#= require_tree ./Zyg/routes
 
 
 #= require ./vendor/browser-update
