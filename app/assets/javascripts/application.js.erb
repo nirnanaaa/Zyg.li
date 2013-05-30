@@ -11,11 +11,5 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require ./env
-
-<% 
-[:jquery, :modernizr, :jquery_ui_widget, :handlebars, :ember, :ember_data, :sugar, :timeago].each do |plugin|
-  require_asset("./vendor/#{Rails.env}/#{plugin}.js")
-end 
-%>
-
-//= require ./BSH_loader
+<% [:jquery, :modernizr, :jquery_ui_widget, :handlebars, :ember, :ember_data, :sugar, :timeago].each{ |plugin|require_asset("./vendor/#{Rails.env}/#{plugin}.js") }%>
+<% require_asset('./BSH_loader.js.coffee') %>

@@ -64,6 +64,11 @@ BSH::Application.routes.draw do
 
   resources :users do
   end
+  resources :session, id: /[A-Za-z0-9\_]+/, only: [ :create, :destroy ] do
+    collection do
+      
+    end
+  end
 
   resources :groups do
   end
@@ -73,6 +78,17 @@ BSH::Application.routes.draw do
 
   namespace :forum do
   
+  end
+
+  resources :static
+  post 'login' => 'static#enter'
+  get 'imprint' => 'static#show', id: :imprint
+  
+
+  scope :users do
+    scope :settings do
+      get 'privacy' => 'users#privacy'
+    end  
   end
 
   get 'robots.txt' => 'crawlers#robots'
